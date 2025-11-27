@@ -1,8 +1,14 @@
 {
   "name": "react-heb-calendar",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "A React Vite component library template with Storybook, Vitest, and Playwright setup. for developing components to be destributed in NPM registry.",
+  "module": "dist/my-react-lib.es.js",
+  "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -10,6 +16,17 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "component-library"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "dependencies": {
     "react": "^19.2.0",
