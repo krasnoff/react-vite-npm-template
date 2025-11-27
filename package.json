@@ -1,17 +1,20 @@
 {
   "name": "react-vite-npm-template",
-  "private": true,
-  "version": "0.0.1",
+  "private": false,
+  "version": "0.0.3",
   "description": "A React Vite component library template with Storybook, Vitest, and Playwright setup. for developing components to be destributed in NPM registry.",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "style": "dist/react-vite-npm-template.css",
   "type": "module",
   "exports": {
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
-    }
+    },
+    "./styles": "./dist/react-vite-npm-template.css",
+    "./dist/react-vite-npm-template.css": "./dist/react-vite-npm-template.css"
   },
   "files": [
     "dist"

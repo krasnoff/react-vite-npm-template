@@ -1,6 +1,40 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite Component Library
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+## Installation
+
+```bash
+npm install react-vite-npm-template
+```
+
+## Usage
+
+Import the components and styles in your application:
+
+```tsx
+import { Button } from 'react-vite-npm-template';
+import 'react-vite-npm-template/styles';
+
+function App() {
+  return (
+    <div>
+      <Button 
+        label="Primary Button" 
+        role="Primary" 
+        onClick={() => console.log('Clicked!')} 
+      />
+      <Button 
+        label="Secondary Button" 
+        role="Secondary" 
+        onClick={() => console.log('Clicked!')} 
+      />
+    </div>
+  );
+}
+```
+
+**Important**: Make sure to import the styles (`'react-vite-npm-template/styles'`) to get the proper styling for the components.
 
 Currently, two official plugins are available:
 
