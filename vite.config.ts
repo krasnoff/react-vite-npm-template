@@ -15,18 +15,13 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'MyReactLib',          // global name for UMD build
-      fileName: (format) => `my-react-lib.${format}.js`,
+      name: 'MyReactLib',          // only used for UMD, but fine to keep
+      formats: ['es'],             // 👈 ESM ONLY
+      fileName: () => 'index.js',  // output: dist/index.js as ESM
     },
     rollupOptions: {
-      // Don’t bundle react / react-dom in the library
+      // don't bundle React – treat as peer dep
       external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-      },
     },
   },
   test: {
@@ -39,7 +34,7 @@ export default defineConfig({
         configDir: path.join(dirname, '.storybook')
       })],
       test: {
-        name: 'storybook',
+        name: 'unit',
         browser: {
           enabled: true,
           headless: true,
@@ -59,7 +54,7 @@ export default defineConfig({
         configDir: path.join(dirname, '.storybook')
       })],
       test: {
-        name: 'storybook',
+        name: 'unit',
         browser: {
           enabled: true,
           headless: true,

@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,      // only .d.ts, no JS
+    "noEmit": false,                  // override "noEmit": true
+    "outDir": "./dist"                // or "./dist/types" if you prefer
+  },
+  "include": ["src"],
+  "exclude": [
+    "src/stories/**",
+    "src/App.*",
+    "src/main.*",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx",
+    "**/*.stories.*",   // 👈 excludes any file that has `.stories.` in its name
+    "public/vite.svg"
+  ]
+}
