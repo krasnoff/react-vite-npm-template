@@ -1,16 +1,27 @@
-# React + TypeScript + Vite Component Library
+# React Vite Component Library Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React component library template built with Vite, TypeScript, and CSS Modules. This template provides a complete setup for developing and distributing reusable React components to the NPM registry.
 
-## Installation
+## Features
+
+- 🚀 **Vite** - Fast build tool and development server
+- 📦 **TypeScript** - Full type safety and IntelliSense support
+- 🎨 **CSS Modules** - Scoped styling with automatic class name hashing
+- 📚 **Storybook** - Component documentation and development environment
+- 🧪 **Vitest** - Fast unit testing framework
+- 🎭 **Playwright** - End-to-end testing capabilities
+- 🔧 **ESLint** - Code linting and formatting
+- 📖 **JSDoc** - Comprehensive component documentation
+
+## Quick Start
+
+### Installation
 
 ```bash
 npm install react-vite-npm-template
 ```
 
-## Usage
-
-Import the components and styles in your application:
+### Basic Usage
 
 ```tsx
 import { Button } from 'react-vite-npm-template';
@@ -18,90 +29,43 @@ import 'react-vite-npm-template/styles';
 
 function App() {
   return (
-    <div>
-      <Button 
-        label="Primary Button" 
-        role="Primary" 
-        onClick={() => console.log('Clicked!')} 
-      />
-      <Button 
-        label="Secondary Button" 
-        role="Secondary" 
-        onClick={() => console.log('Clicked!')} 
-      />
-    </div>
+    <Button 
+      label="Click me!" 
+      role="Primary" 
+      onClick={() => alert('Hello!')} 
+    />
   );
 }
 ```
 
-**Important**: Make sure to import the styles (`'react-vite-npm-template/styles'`) to get the proper styling for the components.
+## Components
 
-Currently, two official plugins are available:
+### Button Component
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A customizable button component with TypeScript support, CSS Modules styling, and multiple variants.
 
-## React Compiler
+**Props:**
+- `label` - The text to display on the button
+- `role` - Visual style variant (`Primary` | `Secondary`)
+- `onClick` - Click handler function
+- `type` - HTML button type (`button` | `submit` | `reset`)
+- All standard HTML button attributes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Documentation
 
-## Expanding the ESLint configuration
+For detailed usage instructions and examples, see:
+- **[USAGE.md](./USAGE.md)** - Complete usage guide with examples and best practices
+- **[NPM_DEPLOYMENT.md](./NPM_DEPLOYMENT.md)** - Deployment checklist and publishing instructions
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Development
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This template includes a complete development environment:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Storybook**: Interactive component development and documentation
+- **Vitest**: Unit testing with React Testing Library
+- **Playwright**: End-to-end testing capabilities
+- **ESLint**: Code quality and consistency checks
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## License
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+MIT
