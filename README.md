@@ -55,6 +55,7 @@ A customizable button component with TypeScript support, CSS Modules styling, an
 
 For detailed usage instructions and examples, see:
 - **[USAGE.md](./USAGE.md)** - Complete usage guide with examples and best practices
+- **[STORYBOOK.md](./STORYBOOK.md)** - Storybook development guide for component development and documentation
 - **[NPM_DEPLOYMENT.md](./NPM_DEPLOYMENT.md)** - Deployment checklist and publishing instructions
 
 ## Development
