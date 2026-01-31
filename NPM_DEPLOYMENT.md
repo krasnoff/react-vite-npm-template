@@ -55,6 +55,12 @@ npm login
 npm publish
 ```
 
+Note: If you want to deploy scoped packages (where package name is something like: "@krasnoff/new_package") then the publish command should be:
+
+```bash
+npm publish --access public
+```
+
 ### 3. **Version Management**
 ```bash
 # Update version (patch/minor/major)
