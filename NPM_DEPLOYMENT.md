@@ -15,6 +15,30 @@
 - Clean class name hashing for production
 
 ### 3. **Package Configuration**
+
+#### Important package.json Settings:
+```json
+{
+  "name": "react-vite-npm-template",
+  "version": "0.0.3",
+  "description": "A React Vite component library template with Storybook, Vitest, and Playwright setup. for developing components to be destributed in NPM registry.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "style": "dist/react-vite-npm-template.css",
+  "private": false,
+  "license": "MIT"
+}
+```
+
+**Before publishing, make sure to update:**
+- **`name`**: Your package name (must be unique on NPM)
+- **`version`**: Follow [Semantic Versioning](https://semver.org/) (MAJOR.MINOR.PATCH)
+- **`description`**: Clear description of what your package does
+- **`author`**: Your name or organization
+- **`private`**: Set to `false` to publish publicly
+
+#### Additional Configuration:
 - Proper `exports` field in package.json for ESM
 - CSS styles accessible via `react-vite-npm-template/styles`
 - TypeScript declarations included
