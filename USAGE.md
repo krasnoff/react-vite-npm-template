@@ -1,9 +1,15 @@
 # Usage Guide
 
-## Installation
+> ⚠️ **IMPORTANT**: This is a **template repository**. Do not install this as a package. Instead, you should **create your own repository based on this template**, then run `npm install` in your new repository.
+
+## Setup Instructions
+
+1. **Create a new repository from this template** by clicking "Use this template" on GitHub, or by cloning and setting it up as your own project
+2. **Clone your new repository** to your local machine
+3. **Install dependencies** in your cloned repository:
 
 ```bash
-npm install react-vite-npm-template
+npm install
 ```
 
 ## Basic Usage

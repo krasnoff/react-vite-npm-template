@@ -80,7 +80,7 @@ npm install react-vite-npm-template
 
 // Use in their app
 import { Button } from 'react-vite-npm-template';
-import 'react-vite-npm-template/styles';
+import 'react-vite-npm-template/dist/react-vite-npm-template.css';
 
 function App() {
   return (
