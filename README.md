@@ -2,6 +2,8 @@
 
 A modern React component library template built with Vite, TypeScript, and CSS Modules. This template provides a complete setup for developing and distributing reusable React components to the NPM registry.
 
+> ⚠️ **IMPORTANT**: This is a **template repository**. Do not install this as a package. Create your own repository based on this template first, then run `npm install` in your new repository.
+
 ## Features
 
 - 🚀 **Vite** - Fast build tool and development server
@@ -15,10 +17,14 @@ A modern React component library template built with Vite, TypeScript, and CSS M
 
 ## Quick Start
 
-### Installation
+### Setup From Template
+
+1. **Create a new repository from this template** using GitHub's "Use this template" option
+2. **Clone your new repository** to your local machine
+3. **Install dependencies** inside your cloned repository:
 
 ```bash
-npm install react-vite-npm-template
+npm install
 ```
 
 ### Basic Usage
